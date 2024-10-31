@@ -1,27 +1,34 @@
-# Angular17App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
 
-## Development server
+# Proyecto Angular
+Este proyecto es una aplicación web desarrollada con Angular. Su objetivo es proporcionar una interfaz de usuario interactiva y dinámica para la gestión de productos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos previos
+Antes de comenzar, asegúrate de tener instalados los siguientes componentes en tu sistema:
 
-## Code scaffolding
+* Node.js (v14 o superior)
+* Angular CLI (v12 o superior)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Primeros pasos
+1. Clonar el repositorio:
+2.  Instalar dependencias:
 
-## Build
+Navega a la carpeta del proyecto clonado e instala todas las dependencias necesarias usando.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm install
+```
 
-## Running unit tests
+# Ejecutar la aplicación
+Para iniciar la aplicación en modo de desarrollo, usa el siguiente comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+$ ng serve
+```
 
-## Running end-to-end tests
+La aplicación estará disponible en http://localhost:4200. Abre tu navegador y navega a esa dirección para ver la aplicación en acción.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Características
+* Interfaz de usuario: Diseñada con Angular Material para una experiencia de usuario mejorada.
+* Gestión de productos: Permite agregar, editar y eliminar productos.
+* API REST: Se comunica con un backend a través de una API REST.

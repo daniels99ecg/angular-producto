@@ -1,0 +1,38 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+
+<div *ngIf="!loading" class="row mt-5">
+    <div class="col-lg offset-lg-4">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+            <div class="card-header text-center">{{operacion}} Producto</div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="additems()">
+             <input formControlName="nameProduct" type="text" name="" id="" class="form-control" placeholder="Nombre">
+             <span *ngIf="form.get('nameProduct')?.hasError('required') && form.get('nameProduct')?.touched">
+              El campo del producto es <strong>obligatorio</strong>
+             </span>
+             <span *ngIf="form.get('nameProduct')?.hasError('maxlength') && form.get('nameProduct')?.touched">
+              El nombre del producto no puede exceder los <strong>100 caracteres</strong>
+              </span>
+             <input formControlName="price" type="number" name="" id="" class="form-control mt-2" placeholder="Precio">
+             <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched">
+
+              El campo de precio es <strong>obligatorio</strong>
+             </span>
+             <span *ngIf="form.get('price')?.hasError('min') && form.get('price')?.touched">
+              El precio debe ser un <strong>número positivo</strong>
+              </span>
+              <div class="row mt-2 justify-content-center text-center">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <button routerLink="/" type="button" class="btn btn-primary">Volver</button>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <button  (click)="clearForm()"  type="button" class="btn btn-primary">Limpiar</button>
+                </div>
+              </div>
+            </form>
+            </div>
+    </div>
+</div>
